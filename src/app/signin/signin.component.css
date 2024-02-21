@@ -96,3 +96,38 @@ button {
       box-sizing: border-box;
     display: inline-block;
 }
+
+.input-container {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+input[type="email"] {
+  width: calc(100% - 20px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  font-size: 16px; /* Match Gmail's input font size */
+}
+
+input[type="email"]:focus {
+  border-color: #007bff; /* Match Gmail's input border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+input[type="email"] + label {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  color: #777;
+  pointer-events: none;
+  transition: top 0.3s, font-size 0.3s, color 0.3s;
+}
+
+input[type="email"]:focus + label,
+input[type="email"]:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 12px; /* Reduce font size when label moves */
+  color: #007bff; /* Match Gmail's label color when input is focused */
+}
