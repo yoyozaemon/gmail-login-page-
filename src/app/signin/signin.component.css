@@ -83,7 +83,7 @@ a {
 div {
     display: block;
 }
-
+/*
 input[type="email"] {
     width: calc(100% - 20px);
     padding: 8px;
@@ -130,4 +130,4 @@ input[type="email"]:not(:placeholder-shown) + label {
   top: -10px;
   font-size: 12px; 
   color: #007bff; 
-}
+}*/

@@ -10,10 +10,17 @@
     <div class="sign-in">Sign in</div>
     <div class="to-gmail">to continue to Gmail</div>   
     <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
-      <div class="input-container">
+      <!--<div class="input-container">
       <input type="email" name="email" [(ngModel)]="email" placeholder="Email or phone" required>
-        <label class="placeholder">Email or phone</label>
-    </div>
+<label class="placeholder">Email or phone</label>-->
+      <p>
+  <mat-form-field appearance="outline">
+    <mat-label>Email or phone</mat-label>
+    <input matInput placeholder="Placeholder">
+  </mat-form-field>
+   </p>
+
+      <!--</div>-->
       <div class="forgot-email">
         <a href="#">Forgot email?</a>
       </div>
