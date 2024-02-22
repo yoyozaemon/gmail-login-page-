@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 
@@ -24,8 +24,8 @@ export class SigninComponent implements OnInit{
   }
 
   onSubmit() {
-    // Handle form submission logic here
-    // console.log('Form submitted!', form.value);
+   
+    console.log('Form submitted!', this.inputForm.value);
   }
 
 
