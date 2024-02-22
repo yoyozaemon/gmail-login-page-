@@ -1,24 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NgForm } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
   styleUrl: './signin.component.css',
-  imports: [MatButtonModule,MatFormFieldModule, MatInputModule],
-  })
+  providers: [FormBuilder]
+})
 
-export class SigninComponent {
-  email: string = ' ';
-
-  constructor(private router:Router){}
-
-  onSubmit(form: NgForm) {
-    // Handle form submission logic here
-    console.log('Form submitted!', form.value);
+export class SigninComponent implements OnInit{
+  // email: string = ' ';
+  inputForm:FormGroup; 
+  constructor(private router:Router,
+    private fb:FormBuilder){
+      
+      this.inputForm=this.fb.group({
+        email:['',Validators.required]
+      })
+    }
+  ngOnInit(): void {
   }
+
+  onSubmit() {
+    // Handle form submission logic here
+    // console.log('Form submitted!', form.value);
+  }
+
+
 }
