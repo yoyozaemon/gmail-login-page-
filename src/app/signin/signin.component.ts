@@ -13,6 +13,7 @@ import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 export class SigninComponent implements OnInit{
   // email: string = ' ';
   inputForm:FormGroup; 
+email: any;
   constructor(private router:Router,
     private fb:FormBuilder){
       

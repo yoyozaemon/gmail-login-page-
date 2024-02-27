@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { SigninComponent } from './signin/signin.component';
-import {MatFormFieldModule, matFormFieldAnimations} from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import { SigninpassComponent } from './signinpass/signinpass.component';
 @NgModule({
 declarations: [
   AppComponent,
-  SigninComponent
+  SigninComponent,
+  SigninpassComponent
 ],
 
 imports: [
